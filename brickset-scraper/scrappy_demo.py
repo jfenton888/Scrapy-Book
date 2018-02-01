@@ -68,7 +68,7 @@ import scrapy
 
 class BrickSetSpider(scrapy.Spider):
     name = "demo_spider"
-    start_urls = ['https://brickset.com/sets/theme-Star-Wars']
+    start_urls = ['https://brickset.com/sets/']
 
     def parse(self, response):
         SET_SELECTOR = '.set'
@@ -94,6 +94,16 @@ class BrickSetSpider(scrapy.Spider):
                 response.urljoin(next_page),
                 callback=self.parse
             )
+
+
+
+
+
+
+
+
+
+
 
 
 
